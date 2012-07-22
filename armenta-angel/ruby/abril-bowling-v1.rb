@@ -5,10 +5,12 @@ puts "12meses12katas: Abril-Bowling"
 class Game 
 
     def initialize rolls
+        puts "Initializing game with rolls = " + rolls + "."
+        
         @score = 0
         @frames = []  
         @extraRolls = []
-
+        
         setFrames rolls  
     end
 
@@ -39,7 +41,7 @@ class Game
             end
         end
 
-        puts @frames.to_s + @extraRolls.to_s
+        puts "Regular rolls = " + @frames.to_s + ". Extra rolls = " + @extraRolls.to_s
     end    
     
     def calcFrameScore frameRolls, frameIndex      
@@ -112,6 +114,7 @@ class Game
 end
 
 # ------------------------------------------------------------------------ Main
+
 
 gameRolls = "X23--4--6X5/23"
 game = Game.new gameRolls
